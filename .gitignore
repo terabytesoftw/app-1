@@ -51,3 +51,6 @@ c3.php
 /runtime/build
 /runtime/debug
 /runtime/logs
+
+#public
+/public/assets
