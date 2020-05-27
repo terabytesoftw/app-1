@@ -11,10 +11,6 @@ use Yiisoft\Yii\Web\Config\EventConfigurator;
 use Yiisoft\Yii\Web\SapiEmitter;
 use Yiisoft\Yii\Web\ServerRequestFactory;
 
-use function dirname;
-use function is_file;
-use function microtime;
-
 $autoload = dirname(__dir__) . '/vendor/autoload.php';
 
 if (!is_file($autoload)) {
