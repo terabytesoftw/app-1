@@ -9,12 +9,14 @@ use Yiisoft\Html\Html;
 
 <?= Html::beginTag('div', ['class' => 'columns']) ?>
 
-    <?= Html::beginTag('div', ['class' => 'column has-text-left', 'style' => 'color: black']) ?>
-        <?= PerformanceMetrics::widget() ?>
+    <?= Html::beginTag('div', ['class' => 'column has-text-left ' . $appModule->getFooterLeftTextColor()]) ?>
+        <?= $appModule->getFooterLeft() ?>
     <?= Html::endTag('div') ?>
-
-    <?= Html::beginTag('div', ['class' => 'column has-text-right']) ?>
-        <a href="https://yiiframework.com"><strong>Copyright © 2020. YiiFramework</a>
+    <?= Html::beginTag('div', ['class' => 'column has-text-centered ' . $appModule->getFooterCenterTextColor()]) ?>
+        <?= $appModule->getFooterCenter() ?>
+    <?= Html::endTag('div') ?>
+    <?= Html::beginTag('div', ['class' => 'column has-text-right  ' . $appModule->getFooterCenterTextColor()]) ?>
+        <?= $appModule->getFooterRigth() ?>
     <?= Html::endTag('div') ?>
 
 <?= Html::tag('div');

@@ -6,7 +6,7 @@ namespace App\Asset;
 
 use Yiisoft\Assets\AssetBundle;
 
-class AppAsset extends AssetBundle
+final class AppAsset extends AssetBundle
 {
     public ?string $basePath = '@basePath';
     public ?string $baseUrl = '@web';

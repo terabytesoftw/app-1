@@ -6,7 +6,7 @@ use Yiisoft\Html\Html;
 
 $this->params['breadcrumbs'] = '/';
 
-$this->setTitle($params->get('yii-extension.app.name'));
+$this->setTitle($appModule->getName());
 ?>
 
 <?= Html::tag('h1', 'Hello World', ['class' => 'title']) ?>

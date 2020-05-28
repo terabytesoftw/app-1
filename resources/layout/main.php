@@ -16,7 +16,7 @@ $this->setJsFiles($assetManager->getJsFiles());
 
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
-    <?= Html::beginTag('html', ['lang' => $params->get('yii-extension.app.language')]) ?>
+    <?= Html::beginTag('html', ['lang' => $appModule->getLanguage()]) ?>
 
         <?= $this->render('_head', ['csrf' => $csrf]) ?>
 
@@ -26,7 +26,10 @@ $this->setJsFiles($assetManager->getJsFiles());
 
                 <?= $this->render('_menu') ?>
 
-                <?= Html::beginTag('section', ['class' => 'hero is-success is-fullheight-with-navbar']) ?>
+                <?= Html::beginTag(
+                    'section',
+                    ['class' => 'hero is-fullheight-with-navbar ' . $appModule->getHeroColor()]
+                ) ?>
 
                     <?= Html::beginTag('div', ['class' => 'hero-body']) ?>
                         <?= Html::beginTag('div', ['class' => 'container has-text-centered']) ?>
@@ -34,7 +37,7 @@ $this->setJsFiles($assetManager->getJsFiles());
                         <?= Html::endTag('div') ?>
                     <?= Html::endTag('div') ?>
 
-                    <?= Html::beginTag('div', ['class' => 'hero-footer']) ?>
+                    <?= Html::beginTag('div', ['class' => 'hero-footer ' . $appModule->getFooterColor()]) ?>
                         <?= $this->render('_footer') ?>
                     <?= Html::endTag('div') ?>
 

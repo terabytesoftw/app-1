@@ -12,7 +12,7 @@ use Yiisoft\Router\RouteCollection;
 use Yiisoft\Router\RouteCollectorInterface;
 use Yiisoft\Yii\Web\Data\Middleware\FormatDataResponse;
 
-class AppRouterFactory
+final class AppRouterFactory
 {
     public function __invoke(ContainerInterface $container)
     {

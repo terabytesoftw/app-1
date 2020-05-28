@@ -6,16 +6,17 @@ use Yii\Extension\Bulma\Nav;
 use Yii\Extension\Bulma\NavBar;
 use Yiisoft\Html\Html;
 
-$menuItems = $params->get('yii-extension.app.menu');
+$menuItems = $appModule->getMenu();
 
 ?>
 
 <?= NavBar::begin()
-    ->brandLabel($params->get('yii-extension.app.name'))
-    ->brandImage($params->get('yii-extension.app.logo'))
-    ->brandUrl($params->get('yii-extension.app.brandurl'))
+    ->brandLabel($appModule->getName())
+    ->brandImage($appModule->getLogo())
+    ->brandUrl($appModule->getBrandUrl())
     ->assetManager($assetManager)
     ->webView($this)
+    ->options(['class' => $appModule->getNavBarColor()])
     ->start();
 ?>
 
