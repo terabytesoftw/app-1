@@ -9,14 +9,14 @@ use Yiisoft\Html\Html;
 
 <?= Html::beginTag('div', ['class' => 'columns']) ?>
 
-    <?= Html::beginTag('div', ['class' => 'column has-text-left ' . $appModule->getFooterLeftTextColor()]) ?>
-        <?= $appModule->getFooterLeft() ?>
+    <?= Html::beginTag('div', ['class' => 'column ' . $appModule->getHeroFooterLeftOptions()]) ?>
+        <?= $appModule->getHeroFooterLeft() ?>
     <?= Html::endTag('div') ?>
-    <?= Html::beginTag('div', ['class' => 'column has-text-centered ' . $appModule->getFooterCenterTextColor()]) ?>
-        <?= $appModule->getFooterCenter() ?>
+    <?= Html::beginTag('div', ['class' => 'column ' . $appModule->getHeroFooterCenterOptions()]) ?>
+        <?= $appModule->getHeroFooterCenter() ?>
     <?= Html::endTag('div') ?>
-    <?= Html::beginTag('div', ['class' => 'column has-text-right  ' . $appModule->getFooterCenterTextColor()]) ?>
-        <?= $appModule->getFooterRigth() ?>
+    <?= Html::beginTag('div', ['class' => 'column ' . $appModule->getHeroFooterRigthOptions()]) ?>
+        <?= $appModule->getHeroFooterRigth() ?>
     <?= Html::endTag('div') ?>
 
 <?= Html::tag('div');

@@ -81,14 +81,16 @@ http://localhost:8080
 return [
     'yii-extension.app.brandurl' => '/',
     'yii-extension.app.charset' => 'UTF-8',
-    'yii-extension.app.footer.color' => 'has-background-black',
-    'yii-extension.app.footer.left' => 'Left',
-    'yii-extension.app.footer.left.text.color' => 'has-text-light',
-    'yii-extension.app.footer.center' => 'Center',
-    'yii-extension.app.footer.center.text.color' => 'has-text-light',
-    'yii-extension.app.footer.rigth' => 'Rigth',
-    'yii-extension.app.footer.rigth.text.color' => 'has-text-light',
-    'yii-extension.app.hero.color' => 'is-light',
+    'yii-extension.app.hero.options' => 'is-light',
+    'yii-extension.app.hero.body.options' => 'is-light',
+    'yii-extension.app.hero.container.options' => 'has-text-centered',
+    'yii-extension.app.hero.footer.options' => 'has-background-black',
+    'yii-extension.app.hero.footer.left' => 'Left',
+    'yii-extension.app.hero.footer.left.options' => 'has-text-left has-text-light',
+    'yii-extension.app.hero.footer.center' => 'Center',
+    'yii-extension.app.hero.footer.center.options' => 'has-text-centered has-text-light',
+    'yii-extension.app.hero.footer.rigth' => 'Rigth',
+    'yii-extension.app.hero.footer.rigth.options' => 'has-text-right has-text-light',
     'yii-extension.app.language' => 'en',
     'yii-extension.app.logo' => 'images/yii-logo.jpg',
     'yii-extension.app.menu' => [
@@ -112,7 +114,7 @@ return [
          */
     ],
     'yii-extension.app.name' => 'My Project Basic',
-    'yii-extension.app.navbar.color' => 'is-black'
+    'yii-extension.app.navbar.color' => 'is-black',
 ];
 ```
 

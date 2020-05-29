@@ -10,14 +10,16 @@ final class AppModule extends AssetBundle
 {
     private string $brandUrl;
     private string $charset;
-    private string $footerColor;
-    private string $footerCenter;
-    private string $footerCenterTextColor;
-    private string $footerLeft;
-    private string $footerLeftTextColor;
-    private string $footerRigth;
-    private string $footerRigthTextColor;
-    private string $heroColor;
+    private string $heroOptions;
+    private string $heroBodyOptions;
+    private string $heroContainerOptions;
+    private string $heroFooterOptions;
+    private string $heroFooterCenter;
+    private string $heroFooterCenterOptions;
+    private string $heroFooterLeft;
+    private string $heroFooterLeftOptions;
+    private string $heroFooterRigth;
+    private string $heroFooterRigthOptions;
     private string $language;
     private string $logo;
     private array $menu = [];
@@ -34,44 +36,54 @@ final class AppModule extends AssetBundle
         return $this->charset;
     }
 
-    public function getFooterColor(): string
+    public function getHeroOptions(): string
     {
-        return $this->footerColor;
+        return $this->heroOptions;
     }
 
-    public function getFooterCenter(): string
+    public function getHeroContainerOptions(): string
     {
-        return $this->footerCenter;
+        return $this->heroContainerOptions;
     }
 
-    public function getFooterCenterTextColor(): string
+    public function getHeroBodyOptions(): string
     {
-        return $this->footerCenterTextColor;
+        return $this->heroBodyOptions;
     }
 
-    public function getFooterLeft(): string
+    public function getHeroFooterOptions(): string
     {
-        return $this->footerLeft;
+        return $this->heroFooterOptions;
     }
 
-    public function getFooterLeftTextColor(): string
+    public function getHeroFooterCenter(): string
     {
-        return $this->footerLeftTextColor;
+        return $this->heroFooterCenter;
     }
 
-    public function getFooterRigth(): string
+    public function getHeroFooterCenterOptions(): string
     {
-        return $this->footerRigth;
+        return $this->heroFooterCenterOptions;
     }
 
-    public function getFooterRigthTextColor(): string
+    public function getHeroFooterLeft(): string
     {
-        return $this->footerRigth;
+        return $this->heroFooterLeft;
     }
 
-    public function getHeroColor(): string
+    public function getHeroFooterLeftOptions(): string
     {
-        return $this->heroColor;
+        return $this->heroFooterLeftOptions;
+    }
+
+    public function getHeroFooterRigth(): string
+    {
+        return $this->heroFooterRigth;
+    }
+
+    public function getHeroFooterRigthOptions(): string
+    {
+        return $this->heroFooterRigthOptions;
     }
 
     public function getLanguage(): string
@@ -109,44 +121,54 @@ final class AppModule extends AssetBundle
         $this->charset = $value;
     }
 
-    public function footerCenter(string $value): void
+    public function heroOptions(string $value): void
     {
-        $this->footerCenter = $value;
+        $this->heroOptions = $value;
     }
 
-    public function footerCenterTextColor(string $value): void
+    public function heroContainerOptions(string $value): void
     {
-        $this->footerCenterTextColor = $value;
+        $this->heroContainerOptions = $value;
     }
 
-    public function footerLeft(string $value): void
+    public function heroBodyOptions(string $value): void
     {
-        $this->footerLeft = $value;
+        $this->heroBodyOptions = $value;
     }
 
-    public function footerLeftTextColor(string $value): void
+    public function heroFooterCenter(string $value): void
     {
-        $this->footerLeftTextColor = $value;
+        $this->heroFooterCenter = $value;
     }
 
-    public function footerRigth(string $value): void
+    public function heroFooterCenterOptions(string $value): void
     {
-        $this->footerRigth = $value;
+        $this->heroFooterCenterOptions = $value;
     }
 
-    public function footerRigthTextColor(string $value): void
+    public function heroFooterLeft(string $value): void
     {
-        $this->footerRigthTextColor = $value;
+        $this->heroFooterLeft = $value;
     }
 
-    public function footerColor(string $value): void
+    public function heroFooterLeftOptions(string $value): void
     {
-        $this->footerColor = $value;
+        $this->heroFooterLeftOptions = $value;
     }
 
-    public function heroColor(string $value): void
+    public function heroFooterRigth(string $value): void
     {
-        $this->heroColor = $value;
+        $this->heroFooterRigth = $value;
+    }
+
+    public function heroFooterRigthOptions(string $value): void
+    {
+        $this->heroFooterRigthOptions = $value;
+    }
+
+    public function heroFooterOptions(string $value): void
+    {
+        $this->heroFooterOptions = $value;
     }
 
     public function language(string $value): void

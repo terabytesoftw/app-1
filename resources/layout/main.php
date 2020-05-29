@@ -28,16 +28,16 @@ $this->setJsFiles($assetManager->getJsFiles());
 
                 <?= Html::beginTag(
                     'section',
-                    ['class' => 'hero is-fullheight-with-navbar ' . $appModule->getHeroColor()]
+                    ['class' => 'hero is-fullheight-with-navbar ' . $appModule->getHeroOptions()]
                 ) ?>
 
-                    <?= Html::beginTag('div', ['class' => 'hero-body']) ?>
-                        <?= Html::beginTag('div', ['class' => 'container has-text-centered']) ?>
+                    <?= Html::beginTag('div', ['class' => 'hero-body ' . $appModule->getHeroBodyOptions()]) ?>
+                        <?= Html::beginTag('div', ['class' => 'container ' . $appModule->getHeroContainerOptions()]) ?>
                             <?= $content ?>
                         <?= Html::endTag('div') ?>
                     <?= Html::endTag('div') ?>
 
-                    <?= Html::beginTag('div', ['class' => 'hero-footer ' . $appModule->getFooterColor()]) ?>
+                    <?= Html::beginTag('div', ['class' => 'hero-footer ' . $appModule->getHeroFooterOptions()]) ?>
                         <?= $this->render('_footer') ?>
                     <?= Html::endTag('div') ?>
 

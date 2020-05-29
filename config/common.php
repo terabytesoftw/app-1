@@ -21,19 +21,21 @@ return [
 
         $appModule->brandUrl($params['yii-extension.app.brandurl']);
         $appModule->charset($params['yii-extension.app.charset']);
-        $appModule->footerColor($params['yii-extension.app.footer.color']);
-        $appModule->footerLeft($params['yii-extension.app.footer.left']);
-        $appModule->footerLeftTextColor($params['yii-extension.app.footer.left.text.color']);
-        $appModule->footerCenter($params['yii-extension.app.footer.center']);
-        $appModule->footerCenterTextColor($params['yii-extension.app.footer.center.text.color']);
-        $appModule->footerRigth($params['yii-extension.app.footer.rigth']);
-        $appModule->footerRigthTextColor($params['yii-extension.app.footer.rigth.text.color']);
+        $appModule->heroOptions($params['yii-extension.app.hero.options']);
+        $appModule->heroBodyOptions($params['yii-extension.app.hero.body.options']);
+        $appModule->heroContainerOptions($params['yii-extension.app.hero.container.options']);
+        $appModule->heroFooterOptions($params['yii-extension.app.hero.footer.options']);
+        $appModule->heroFooterLeft($params['yii-extension.app.hero.footer.left']);
+        $appModule->heroFooterLeftOptions($params['yii-extension.app.hero.footer.left.options']);
+        $appModule->heroFooterCenter($params['yii-extension.app.hero.footer.center']);
+        $appModule->heroFooterCenterOptions($params['yii-extension.app.hero.footer.center.options']);
+        $appModule->heroFooterRigth($params['yii-extension.app.hero.footer.rigth']);
+        $appModule->heroFooterRigthOptions($params['yii-extension.app.hero.footer.rigth.options']);
         $appModule->language($params['yii-extension.app.language']);
         $appModule->logo($params['yii-extension.app.logo']);
         $appModule->menu($params['yii-extension.app.menu']);
         $appModule->name($params['yii-extension.app.name']);
         $appModule->navBarColor($params['yii-extension.app.navbar.color']);
-        $appModule->heroColor($params['yii-extension.app.hero.color']);
 
         return $appModule;
     },
