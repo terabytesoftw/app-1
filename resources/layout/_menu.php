@@ -6,17 +6,24 @@ use Yii\Extension\Bulma\Nav;
 use Yii\Extension\Bulma\NavBar;
 use Yiisoft\Html\Html;
 
-$menuItems = $appModule->getMenu();
+if (isset($user) && $user->getId() !== null) {
+    $menuItems[] = [
+        'label' => 'Logout' . ' ' . '(' . $user->getIdentity()->username . ')',
+        'url' => '/auth/logout'
+    ];
+} else {
+    $menuItems =  $layoutParameters->getMenu();
+}
 
 ?>
 
 <?= NavBar::begin()
-    ->brandLabel($appModule->getName())
-    ->brandImage($appModule->getLogo())
-    ->brandUrl($appModule->getBrandUrl())
+    ->brandLabel($layoutParameters->getName())
+    ->brandImage($layoutParameters->getLogo())
+    ->brandUrl($layoutParameters->getBrandUrl())
     ->assetManager($assetManager)
     ->webView($this)
-    ->options(['class' => $appModule->getNavBarColor()])
+    ->options(['class' => $layoutParameters->getNavBarColor()])
     ->start();
 ?>
 

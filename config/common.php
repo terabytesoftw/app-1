@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\AppModule;
+use App\LayoutParameters;
 use App\Factory\AppRouterFactory;
 use Psr\Container\ContainerInterface;
 use Yiisoft\Router\FastRoute\UrlGenerator;
@@ -16,28 +16,28 @@ return [
         return $container;
     },
 
-    AppModule::class => static function () use ($params) {
-        $appModule = new AppModule();
+    LayoutParameters::class => static function () use ($params) {
+        $layoutParameters = new LayoutParameters();
 
-        $appModule->brandUrl($params['yii-extension.app.brandurl']);
-        $appModule->charset($params['yii-extension.app.charset']);
-        $appModule->heroOptions($params['yii-extension.app.hero.options']);
-        $appModule->heroBodyOptions($params['yii-extension.app.hero.body.options']);
-        $appModule->heroContainerOptions($params['yii-extension.app.hero.container.options']);
-        $appModule->heroFooterOptions($params['yii-extension.app.hero.footer.options']);
-        $appModule->heroFooterLeft($params['yii-extension.app.hero.footer.left']);
-        $appModule->heroFooterLeftOptions($params['yii-extension.app.hero.footer.left.options']);
-        $appModule->heroFooterCenter($params['yii-extension.app.hero.footer.center']);
-        $appModule->heroFooterCenterOptions($params['yii-extension.app.hero.footer.center.options']);
-        $appModule->heroFooterRigth($params['yii-extension.app.hero.footer.rigth']);
-        $appModule->heroFooterRigthOptions($params['yii-extension.app.hero.footer.rigth.options']);
-        $appModule->language($params['yii-extension.app.language']);
-        $appModule->logo($params['yii-extension.app.logo']);
-        $appModule->menu($params['yii-extension.app.menu']);
-        $appModule->name($params['yii-extension.app.name']);
-        $appModule->navBarColor($params['yii-extension.app.navbar.color']);
+        $layoutParameters->brandUrl($params['yii-extension.app.brandurl']);
+        $layoutParameters->charset($params['yii-extension.app.charset']);
+        $layoutParameters->heroOptions($params['yii-extension.app.hero.options']);
+        $layoutParameters->heroBodyOptions($params['yii-extension.app.hero.body.options']);
+        $layoutParameters->heroContainerOptions($params['yii-extension.app.hero.container.options']);
+        $layoutParameters->heroFooterOptions($params['yii-extension.app.hero.footer.options']);
+        $layoutParameters->heroFooterLeft($params['yii-extension.app.hero.footer.left']);
+        $layoutParameters->heroFooterLeftOptions($params['yii-extension.app.hero.footer.left.options']);
+        $layoutParameters->heroFooterCenter($params['yii-extension.app.hero.footer.center']);
+        $layoutParameters->heroFooterCenterOptions($params['yii-extension.app.hero.footer.center.options']);
+        $layoutParameters->heroFooterRigth($params['yii-extension.app.hero.footer.rigth']);
+        $layoutParameters->heroFooterRigthOptions($params['yii-extension.app.hero.footer.rigth.options']);
+        $layoutParameters->language($params['yii-extension.app.language']);
+        $layoutParameters->logo($params['yii-extension.app.logo']);
+        $layoutParameters->menu($params['yii-extension.app.menu']);
+        $layoutParameters->name($params['yii-extension.app.name']);
+        $layoutParameters->navBarColor($params['yii-extension.app.navbar.color']);
 
-        return $appModule;
+        return $layoutParameters;
     },
 
     /** Router config */

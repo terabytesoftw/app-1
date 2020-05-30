@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Provider;
 
-use App\AppModule;
+use App\LayoutParameters;
 use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
@@ -43,7 +43,7 @@ final class WebViewProvider extends ServiceProvider
                     'assetManager' => $container->get(AssetManager::class),
                     'urlGenerator' => $container->get(UrlGeneratorInterface::class),
                     'urlMatcher' => $container->get(UrlMatcherInterface::class),
-                    'appModule' => $container->get(AppModule::class)
+                    'layoutParameters' => $container->get(LayoutParameters::class)
                 ]
             );
 

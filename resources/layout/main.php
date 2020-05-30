@@ -16,7 +16,7 @@ $this->setJsFiles($assetManager->getJsFiles());
 
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
-    <?= Html::beginTag('html', ['lang' => $appModule->getLanguage()]) ?>
+    <?= Html::beginTag('html', ['lang' => $layoutParameters->getLanguage()]) ?>
 
         <?= $this->render('_head', ['csrf' => $csrf]) ?>
 
@@ -28,16 +28,16 @@ $this->setJsFiles($assetManager->getJsFiles());
 
                 <?= Html::beginTag(
                     'section',
-                    ['class' => 'hero is-fullheight-with-navbar ' . $appModule->getHeroOptions()]
+                    ['class' => 'hero is-fullheight-with-navbar ' . $layoutParameters->getHeroOptions()]
                 ) ?>
 
-                    <?= Html::beginTag('div', ['class' => 'hero-body ' . $appModule->getHeroBodyOptions()]) ?>
-                        <?= Html::beginTag('div', ['class' => 'container ' . $appModule->getHeroContainerOptions()]) ?>
+                    <?= Html::beginTag('div', ['class' => 'hero-body ' . $layoutParameters->getHeroBodyOptions()]) ?>
+                        <?= Html::beginTag('div', ['class' => 'container ' . $layoutParameters->getHeroContainerOptions()]) ?>
                             <?= $content ?>
                         <?= Html::endTag('div') ?>
                     <?= Html::endTag('div') ?>
 
-                    <?= Html::beginTag('div', ['class' => 'hero-footer ' . $appModule->getHeroFooterOptions()]) ?>
+                    <?= Html::beginTag('div', ['class' => 'hero-footer ' . $layoutParameters->getHeroFooterOptions()]) ?>
                         <?= $this->render('_footer') ?>
                     <?= Html::endTag('div') ?>
 

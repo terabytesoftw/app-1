@@ -9,14 +9,14 @@ use Yiisoft\Html\Html;
 
 <?= Html::beginTag('div', ['class' => 'columns']) ?>
 
-    <?= Html::beginTag('div', ['class' => 'column ' . $appModule->getHeroFooterLeftOptions()]) ?>
-        <?= $appModule->getHeroFooterLeft() ?>
+    <?= Html::beginTag('div', ['class' => 'column ' . $layoutParameters->getHeroFooterLeftOptions()]) ?>
+        <?= $layoutParameters->getHeroFooterLeft() ?>
     <?= Html::endTag('div') ?>
-    <?= Html::beginTag('div', ['class' => 'column ' . $appModule->getHeroFooterCenterOptions()]) ?>
-        <?= $appModule->getHeroFooterCenter() ?>
+    <?= Html::beginTag('div', ['class' => 'column ' . $layoutParameters->getHeroFooterCenterOptions()]) ?>
+        <?= $layoutParameters->getHeroFooterCenter() ?>
     <?= Html::endTag('div') ?>
-    <?= Html::beginTag('div', ['class' => 'column ' . $appModule->getHeroFooterRigthOptions()]) ?>
-        <?= $appModule->getHeroFooterRigth() ?>
+    <?= Html::beginTag('div', ['class' => 'column ' . $layoutParameters->getHeroFooterRigthOptions()]) ?>
+        <?= $layoutParameters->getHeroFooterRigth() ?>
     <?= Html::endTag('div') ?>
 
 <?= Html::tag('div');
