@@ -1,5 +1,0 @@
-{
-    "dependencies": {
-        "@composer-asset/yii-extension--bulma": "file:./vendor/foxy/composer-asset/yii-extension/bulma"
-    }
-}

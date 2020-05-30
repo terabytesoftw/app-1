@@ -11,7 +11,6 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4",
-        "foxy/foxy": "@dev",
         "nyholm/psr7": "@dev",
         "yii-extension/bulma": "@dev",
         "yiisoft/aliases": "@dev",
