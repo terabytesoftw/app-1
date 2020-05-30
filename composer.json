@@ -14,6 +14,7 @@
         "nyholm/psr7": "@dev",
         "yii-extension/bulma": "@dev",
         "yiisoft/aliases": "@dev",
+        "yiisoft/arrays": "@dev",
         "yiisoft/cache": "@dev",
         "yiisoft/cache-file": "@dev",
         "yiisoft/di": "@dev",
