@@ -10,21 +10,22 @@ final class LayoutParameters extends AssetBundle
 {
     private string $brandUrl;
     private string $charset;
-    private string $heroOptions;
-    private string $heroBodyOptions;
-    private string $heroContainerOptions;
-    private string $heroFooterOptions;
-    private string $heroFooterCenter;
-    private string $heroFooterCenterOptions;
-    private string $heroFooterLeft;
-    private string $heroFooterLeftOptions;
-    private string $heroFooterRigth;
-    private string $heroFooterRigthOptions;
+    private array $heroOptions = [];
+    private array $heroBodyOptions = [];
+    private array $heroContainerOptions = [];
+    private array $heroFooterOptions = [];
+    private array $heroFooterColumnOptions = [];
+    private string $heroFooterColumnCenter;
+    private array $heroFooterColumnCenterOptions = [];
+    private string $heroFooterColumnLeft;
+    private array $heroFooterColumnLeftOptions = [];
+    private string $heroFooterColumnRigth;
+    private array $heroFooterColumnRigthOptions = [];
     private string $language;
     private string $logo;
     private array $menu = [];
     private string $name;
-    private string $navBarColor;
+    private array $navBarOptions = [];
 
     public function getBrandUrl(): string
     {
@@ -36,54 +37,59 @@ final class LayoutParameters extends AssetBundle
         return $this->charset;
     }
 
-    public function getHeroOptions(): string
+    public function getHeroOptions(): array
     {
         return $this->heroOptions;
     }
 
-    public function getHeroContainerOptions(): string
+    public function getHeroContainerOptions(): array
     {
         return $this->heroContainerOptions;
     }
 
-    public function getHeroBodyOptions(): string
+    public function getHeroBodyOptions(): array
     {
         return $this->heroBodyOptions;
     }
 
-    public function getHeroFooterOptions(): string
+    public function getHeroFooterOptions(): array
     {
         return $this->heroFooterOptions;
     }
 
-    public function getHeroFooterCenter(): string
+    public function getHeroFooterColumnOptions(): array
     {
-        return $this->heroFooterCenter;
+        return $this->heroFooterColumnOptions;
     }
 
-    public function getHeroFooterCenterOptions(): string
+    public function getHeroFooterColumnCenter(): string
     {
-        return $this->heroFooterCenterOptions;
+        return $this->heroFooterColumnCenter;
     }
 
-    public function getHeroFooterLeft(): string
+    public function getHeroFooterColumnCenterOptions(): array
     {
-        return $this->heroFooterLeft;
+        return $this->heroFooterColumnCenterOptions;
     }
 
-    public function getHeroFooterLeftOptions(): string
+    public function getHeroFooterColumnLeft(): string
     {
-        return $this->heroFooterLeftOptions;
+        return $this->heroFooterColumnLeft;
     }
 
-    public function getHeroFooterRigth(): string
+    public function getHeroFooterColumnLeftOptions(): array
     {
-        return $this->heroFooterRigth;
+        return $this->heroFooterColumnLeftOptions;
     }
 
-    public function getHeroFooterRigthOptions(): string
+    public function getHeroFooterColumnRigth(): string
     {
-        return $this->heroFooterRigthOptions;
+        return $this->heroFooterColumnRigth;
+    }
+
+    public function getHeroFooterColumnRigthOptions(): array
+    {
+        return $this->heroFooterColumnRigthOptions;
     }
 
     public function getLanguage(): string
@@ -101,9 +107,9 @@ final class LayoutParameters extends AssetBundle
         return $this->menu;
     }
 
-    public function getNavBarColor(): string
+    public function getNavBarOptions(): array
     {
-        return $this->navBarColor;
+        return $this->navBarOptions;
     }
 
     public function getName(): string
@@ -121,52 +127,57 @@ final class LayoutParameters extends AssetBundle
         $this->charset = $value;
     }
 
-    public function heroOptions(string $value): void
+    public function heroOptions(array $value): void
     {
         $this->heroOptions = $value;
     }
 
-    public function heroContainerOptions(string $value): void
+    public function heroContainerOptions(array $value): void
     {
         $this->heroContainerOptions = $value;
     }
 
-    public function heroBodyOptions(string $value): void
+    public function heroBodyOptions(array $value): void
     {
         $this->heroBodyOptions = $value;
     }
 
-    public function heroFooterCenter(string $value): void
+    public function heroFooterColumnOptions(array $value): void
     {
-        $this->heroFooterCenter = $value;
+        $this->heroFooterColumnOptions = $value;
     }
 
-    public function heroFooterCenterOptions(string $value): void
+    public function heroFooterColumnCenter(string $value): void
     {
-        $this->heroFooterCenterOptions = $value;
+        $this->heroFooterColumnCenter = $value;
     }
 
-    public function heroFooterLeft(string $value): void
+    public function heroFooterColumnCenterOptions(array $value): void
     {
-        $this->heroFooterLeft = $value;
+        $this->heroFooterColumnCenterOptions = $value;
     }
 
-    public function heroFooterLeftOptions(string $value): void
+    public function heroFooterColumnLeft(string $value): void
     {
-        $this->heroFooterLeftOptions = $value;
+        $this->heroFooterColumnLeft = $value;
     }
 
-    public function heroFooterRigth(string $value): void
+    public function heroFooterColumnLeftOptions(array $value): void
     {
-        $this->heroFooterRigth = $value;
+        $this->heroFooterColumnLeftOptions = $value;
     }
 
-    public function heroFooterRigthOptions(string $value): void
+    public function heroFooterColumnRigth(string $value): void
     {
-        $this->heroFooterRigthOptions = $value;
+        $this->heroFooterColumnRigth = $value;
     }
 
-    public function heroFooterOptions(string $value): void
+    public function heroFooterColumnRigthOptions(array $value): void
+    {
+        $this->heroFooterColumnRigthOptions = $value;
+    }
+
+    public function heroFooterOptions(array $value): void
     {
         $this->heroFooterOptions = $value;
     }
@@ -186,9 +197,9 @@ final class LayoutParameters extends AssetBundle
         $this->menu = $value;
     }
 
-    public function navBarColor(string $value): void
+    public function navBarOptions(array $value): void
     {
-        $this->navBarColor = $value;
+        $this->navBarOptions = $value;
     }
 
     public function name(string $value): void

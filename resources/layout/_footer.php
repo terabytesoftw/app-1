@@ -7,16 +7,18 @@ use Yiisoft\Html\Html;
 
 ?>
 
-<?= Html::beginTag('div', ['class' => 'columns']) ?>
+<?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnOptions()) ?>
 
-    <?= Html::beginTag('div', ['class' => 'column ' . $layoutParameters->getHeroFooterLeftOptions()]) ?>
-        <?= $layoutParameters->getHeroFooterLeft() ?>
+    <?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnLeftOptions()) ?>
+        <?= $layoutParameters->getHeroFooterColumnLeft() ?>
     <?= Html::endTag('div') ?>
-    <?= Html::beginTag('div', ['class' => 'column ' . $layoutParameters->getHeroFooterCenterOptions()]) ?>
-        <?= $layoutParameters->getHeroFooterCenter() ?>
+
+    <?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnCenterOptions()) ?>
+        <?= $layoutParameters->getHeroFooterColumnCenter() ?>
     <?= Html::endTag('div') ?>
-    <?= Html::beginTag('div', ['class' => 'column ' . $layoutParameters->getHeroFooterRigthOptions()]) ?>
-        <?= $layoutParameters->getHeroFooterRigth() ?>
+
+    <?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnRigthOptions()) ?>
+        <?= $layoutParameters->getHeroFooterColumnRigth() ?>
     <?= Html::endTag('div') ?>
 
 <?= Html::tag('div');

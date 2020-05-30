@@ -23,7 +23,7 @@ if (isset($user) && $user->getId() !== null) {
     ->brandUrl($layoutParameters->getBrandUrl())
     ->assetManager($assetManager)
     ->webView($this)
-    ->options(['class' => $layoutParameters->getNavBarColor()])
+    ->options($layoutParameters->getNavBarOptions())
     ->start();
 ?>
 

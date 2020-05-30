@@ -81,16 +81,17 @@ http://localhost:8080
 return [
     'yii-extension.app.brandurl' => '/',
     'yii-extension.app.charset' => 'UTF-8',
-    'yii-extension.app.hero.options' => 'is-light',
-    'yii-extension.app.hero.body.options' => 'is-light',
-    'yii-extension.app.hero.container.options' => 'has-text-centered',
-    'yii-extension.app.hero.footer.options' => 'has-background-black',
-    'yii-extension.app.hero.footer.left' => 'Left',
-    'yii-extension.app.hero.footer.left.options' => 'has-text-left has-text-light',
-    'yii-extension.app.hero.footer.center' => 'Center',
-    'yii-extension.app.hero.footer.center.options' => 'has-text-centered has-text-light',
-    'yii-extension.app.hero.footer.rigth' => 'Rigth',
-    'yii-extension.app.hero.footer.rigth.options' => 'has-text-right has-text-light',
+    'yii-extension.app.hero.options' => ['class' => 'hero is-fullheight-with-navbar is-light'],
+    'yii-extension.app.hero.body.options' => ['class' => 'hero-body is-light'],
+    'yii-extension.app.hero.container.options' => ['class' => 'container has-text-centered'],
+    'yii-extension.app.hero.footer.options' => ['class' => 'hero-footer has-background-black'],
+    'yii-extension.app.hero.footer.column.options' => ['class' => 'columns'],
+    'yii-extension.app.hero.footer.column.left' => 'Left',
+    'yii-extension.app.hero.footer.column.left.options' => ['class' => 'column has-text-left has-text-light'],
+    'yii-extension.app.hero.footer.column.center' => 'Center',
+    'yii-extension.app.hero.footer.column.center.options' => ['class' => 'column has-text-centered has-text-light'],
+    'yii-extension.app.hero.footer.column.rigth' => 'Rigth',
+    'yii-extension.app.hero.footer.column.rigth.options' => ['class' => 'column has-text-right has-text-light'],
     'yii-extension.app.language' => 'en',
     'yii-extension.app.logo' => 'images/yii-logo.jpg',
     'yii-extension.app.menu' => [
@@ -114,7 +115,7 @@ return [
          */
     ],
     'yii-extension.app.name' => 'My Project Basic',
-    'yii-extension.app.navbar.color' => 'is-black',
+    'yii-extension.app.navbar.options' => ['class' => 'is-black', 'data-sticky' => '', 'data-sticky-shadow' => ''],
 ];
 ```
 

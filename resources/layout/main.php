@@ -26,18 +26,15 @@ $this->setJsFiles($assetManager->getJsFiles());
 
                 <?= $this->render('_menu') ?>
 
-                <?= Html::beginTag(
-                    'section',
-                    ['class' => 'hero is-fullheight-with-navbar ' . $layoutParameters->getHeroOptions()]
-                ) ?>
+                <?= Html::beginTag('section', $layoutParameters->getHeroOptions()) ?>
 
-                    <?= Html::beginTag('div', ['class' => 'hero-body ' . $layoutParameters->getHeroBodyOptions()]) ?>
-                        <?= Html::beginTag('div', ['class' => 'container ' . $layoutParameters->getHeroContainerOptions()]) ?>
+                    <?= Html::beginTag('div', $layoutParameters->getHeroBodyOptions()) ?>
+                        <?= Html::beginTag('div', $layoutParameters->getHeroContainerOptions()) ?>
                             <?= $content ?>
                         <?= Html::endTag('div') ?>
                     <?= Html::endTag('div') ?>
 
-                    <?= Html::beginTag('div', ['class' => 'hero-footer ' . $layoutParameters->getHeroFooterOptions()]) ?>
+                    <?= Html::beginTag('div', $layoutParameters->getHeroFooterOptions()) ?>
                         <?= $this->render('_footer') ?>
                     <?= Html::endTag('div') ?>
 
