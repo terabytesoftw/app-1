@@ -39,6 +39,7 @@ return [
             ->logo($params['yii-extension/app']['logo'])
             ->name($params['yii-extension/app']['name'])
             ->navBarOptions($params['yii-extension/app']['navbar.options'])
+            ->menu($params['yii-extension/app']['menu'])
             ->loggerLevels($params['yii-extension/app']['logger']['levels']);
     },
 
