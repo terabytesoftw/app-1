@@ -21,8 +21,6 @@ if (isset($user) && $user->getId() !== null) {
     ->brandLabel($layoutParameters->getName())
     ->brandImage($layoutParameters->getLogo())
     ->brandUrl($layoutParameters->getBrandUrl())
-    ->assetManager($assetManager)
-    ->webView($this)
     ->options($layoutParameters->getNavBarOptions())
     ->start();
 ?>

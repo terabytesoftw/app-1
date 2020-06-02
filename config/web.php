@@ -18,12 +18,8 @@ use Yiisoft\Yii\Web\MiddlewareDispatcher;
 use Yiisoft\Yii\Web\Session\Session;
 use Yiisoft\Yii\Web\Session\SessionInterface;
 
-/**
- * @var array $params
- */
-
 return [
-    /** PSR-17 factories: */
+    /** PSR-17 */
     RequestFactoryInterface::class => Psr17Factory::class,
     ServerRequestFactoryInterface::class => Psr17Factory::class,
     ResponseFactoryInterface::class => Psr17Factory::class,
@@ -33,15 +29,15 @@ return [
     DataResponseFormatterInterface::class => HtmlDataResponseFormatter::class,
     DataResponseFactoryInterface::class => DataResponseFactory::class,
 
-    /**  */
+    /** MIDDLEWARE */
     MiddlewareDispatcher::class => new MiddlewareDispatcherFactory(),
 
-    /** */
+    /** SESSION */
     SessionInterface::class => [
         '__class' => Session::class,
         '__construct()' => [
-            $params['session']['options'] ?? [],
-            $params['session']['handler'] ?? null,
+            $params['yii-extension/app']['session']['options'] ?? [],
+            $params['yii-extension/app']['session']['handler'] ?? null,
         ],
     ],
 ];

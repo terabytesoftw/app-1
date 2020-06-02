@@ -26,6 +26,7 @@ final class LayoutParameters extends AssetBundle
     private array $menu = [];
     private string $name;
     private array $navBarOptions = [];
+    private array $loggerLevels = [];
 
     public function getBrandUrl(): string
     {
@@ -117,93 +118,141 @@ final class LayoutParameters extends AssetBundle
         return $this->name;
     }
 
-    public function brandUrl(string $value): void
+    public function getLoggerLevels(): array
     {
-        $this->brandUrl = $value;
+        return $this->loggerLevels;
     }
 
-    public function charset(string $value): void
+    public function brandUrl(string $value): self
     {
-        $this->charset = $value;
+        $new = clone $this;
+        $new->brandUrl = $value;
+        return $new;
     }
 
-    public function heroOptions(array $value): void
+    public function charset(string $value): self
     {
-        $this->heroOptions = $value;
+        $new = clone $this;
+        $new->charset = $value;
+        return $new;
     }
 
-    public function heroContainerOptions(array $value): void
+    public function heroOptions(array $value): self
     {
-        $this->heroContainerOptions = $value;
+        $new = clone $this;
+        $new->heroOptions = $value;
+        return $new;
     }
 
-    public function heroBodyOptions(array $value): void
+    public function heroContainerOptions(array $value): self
     {
-        $this->heroBodyOptions = $value;
+        $new = clone $this;
+        $new->heroContainerOptions = $value;
+        return $new;
     }
 
-    public function heroFooterColumnOptions(array $value): void
+    public function heroBodyOptions(array $value): self
     {
-        $this->heroFooterColumnOptions = $value;
+        $new = clone $this;
+        $new->heroBodyOptions = $value;
+        return $new;
     }
 
-    public function heroFooterColumnCenter(string $value): void
+    public function heroFooterColumnOptions(array $value): self
     {
-        $this->heroFooterColumnCenter = $value;
+        $new = clone $this;
+        $new->heroFooterColumnOptions = $value;
+        return $new;
     }
 
-    public function heroFooterColumnCenterOptions(array $value): void
+    public function heroFooterColumnCenter(string $value): self
     {
-        $this->heroFooterColumnCenterOptions = $value;
+        $new = clone $this;
+        $new->heroFooterColumnCenter = $value;
+        return $new;
     }
 
-    public function heroFooterColumnLeft(string $value): void
+    public function heroFooterColumnCenterOptions(array $value): self
     {
-        $this->heroFooterColumnLeft = $value;
+        $new = clone $this;
+        $new->heroFooterColumnCenterOptions = $value;
+        return $new;
     }
 
-    public function heroFooterColumnLeftOptions(array $value): void
+    public function heroFooterColumnLeft(string $value): self
     {
-        $this->heroFooterColumnLeftOptions = $value;
+        $new = clone $this;
+        $new->heroFooterColumnLeft = $value;
+        return $new;
     }
 
-    public function heroFooterColumnRigth(string $value): void
+    public function heroFooterColumnLeftOptions(array $value): self
     {
-        $this->heroFooterColumnRigth = $value;
+        $new = clone $this;
+        $new->heroFooterColumnLeftOptions = $value;
+        return $new;
     }
 
-    public function heroFooterColumnRigthOptions(array $value): void
+    public function heroFooterColumnRigth(string $value): self
     {
-        $this->heroFooterColumnRigthOptions = $value;
+        $new = clone $this;
+        $new->heroFooterColumnRigth = $value;
+        return $new;
     }
 
-    public function heroFooterOptions(array $value): void
+    public function heroFooterColumnRigthOptions(array $value): self
     {
-        $this->heroFooterOptions = $value;
+        $new = clone $this;
+        $new->heroFooterColumnRigthOptions = $value;
+        return $new;
     }
 
-    public function language(string $value): void
+    public function heroFooterOptions(array $value): self
     {
-        $this->language = $value;
+        $new = clone $this;
+        $new->heroFooterOptions = $value;
+        return $new;
     }
 
-    public function logo(string $value): void
+    public function language(string $value): self
     {
-        $this->logo = $value;
+        $new = clone $this;
+        $new->language = $value;
+        return $new;
     }
 
-    public function menu(array $value): void
+    public function logo(string $value): self
     {
-        $this->menu = $value;
+        $new = clone $this;
+        $new->logo = $value;
+        return $new;
     }
 
-    public function navBarOptions(array $value): void
+    public function menu(array $value): self
     {
-        $this->navBarOptions = $value;
+        $new = clone $this;
+        $new->menu = $value;
+        return $new;
     }
 
-    public function name(string $value): void
+    public function navBarOptions(array $value): self
     {
-        $this->name = $value;
+        $new = clone $this;
+        $new->navBarOptions = $value;
+        return $new;
+    }
+
+    public function name(string $value): self
+    {
+        $new = clone $this;
+        $new->name = $value;
+        return $new;
+    }
+
+    public function loggerLevels(array $value): self
+    {
+        $new = clone $this;
+        $new->loggerLevels = $value;
+        return $new;
     }
 }

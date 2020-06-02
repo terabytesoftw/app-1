@@ -7,9 +7,9 @@ namespace App\Controller;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class SiteController extends Controller
+final class SiteController extends AbstractController
 {
-    protected function getId(): string
+    protected function name(): string
     {
         return 'site';
     }
