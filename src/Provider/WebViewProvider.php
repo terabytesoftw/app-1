@@ -33,9 +33,10 @@ final class WebViewProvider extends ServiceProvider
             );
 
             /**
-             * Passes {@see UrlGeneratorInterface} {@see AssetManager} {@see params } to view files.
+             * Passes {@see Aliases} {@see AssetManager} {@see UrlGenerator} {@see UrlMatcher} {@see LayoutParameters}
              *
-             * It will be available as $urlGenerator, $assetManager in view or layout.
+             * It will be available as $aliases, $assetManager, $urlGenerator, $urlMatcher, $layoutParameters in view
+             * or layout.
              */
             $webView->setDefaultParameters(
                 [

@@ -5,13 +5,6 @@ declare(strict_types=1);
 use Psr\Log\LogLevel;
 
 return [
-    'aliases' => [
-        '@root' => dirname(__DIR__),
-        '@basePath' => '@root/public/assets',
-        '@assetsUrl' => '/assets',
-        '@npm' => '@root/node_modules',
-    ],
-
     'yii-extension/app' => [
         'brandurl' => '/',
         'charset' => 'UTF-8',
