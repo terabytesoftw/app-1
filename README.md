@@ -70,9 +70,13 @@ use Psr\Log\LogLevel;
 return [
     'aliases' => [
         '@root' => dirname(__DIR__),
-        '@basePath' => '@root/public/assets',
+        '@assets' => '@root/public/assets',
         '@assetsUrl' => '/assets',
         '@npm' => '@root/node_modules',
+        '@public' => '@root/public',
+        '@resources' => '@root/resources',
+        '@runtime' => '@root/runtime',
+        '@views' => '@root/resources/views'
     ],
 
     'yii-extension/app' => [
@@ -128,8 +132,7 @@ return [
     ],
 
     'yiisoft/yii-debug' => [
-        'enabled' => true,
-        'path' => '@root/runtime/debug'
+        'enabled' => true
     ],
 ];
 ```
