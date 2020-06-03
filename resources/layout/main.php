@@ -5,6 +5,13 @@ declare(strict_types=1);
 use App\Asset\AppAsset;
 use Yiisoft\Html\Html;
 
+/**
+ * @var \Yiisoft\Assets\AssetManager $assetManager
+ * @var \App\ApplicationParameters $applicationParameters
+ * @var string $csrf
+ * @var string $content
+ */
+
 $assetManager->register([
     AppAsset::class,
 ]);
@@ -16,7 +23,7 @@ $this->setJsFiles($assetManager->getJsFiles());
 
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
-    <?= Html::beginTag('html', ['lang' => $layoutParameters->getLanguage()]) ?>
+    <?= Html::beginTag('html', ['lang' => $applicationParameters->getLanguage()]) ?>
 
         <?= $this->render('_head', ['csrf' => $csrf]) ?>
 
@@ -26,15 +33,15 @@ $this->setJsFiles($assetManager->getJsFiles());
 
                 <?= $this->render('_menu') ?>
 
-                <?= Html::beginTag('section', $layoutParameters->getHeroOptions()) ?>
+                <?= Html::beginTag('section', $applicationParameters->getHeroOptions()) ?>
 
-                    <?= Html::beginTag('div', $layoutParameters->getHeroBodyOptions()) ?>
-                        <?= Html::beginTag('div', $layoutParameters->getHeroContainerOptions()) ?>
+                    <?= Html::beginTag('div', $applicationParameters->getHeroBodyOptions()) ?>
+                        <?= Html::beginTag('div', $applicationParameters->getHeroContainerOptions()) ?>
                             <?= $content ?>
                         <?= Html::endTag('div') ?>
                     <?= Html::endTag('div') ?>
 
-                    <?= Html::beginTag('div', $layoutParameters->getHeroFooterOptions()) ?>
+                    <?= Html::beginTag('div', $applicationParameters->getHeroFooterOptions()) ?>
                         <?= $this->render('_footer') ?>
                     <?= Html::endTag('div') ?>
 

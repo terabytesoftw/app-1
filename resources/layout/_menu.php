@@ -2,6 +2,12 @@
 
 declare(strict_types=1);
 
+/**
+ * @var array $menuItems
+ * @var \App\ApplicationParameters $applicationParameters
+ * @var \Yiisoft\Yii\Web\User\User $user
+ */
+
 use Yii\Extension\Bulma\Nav;
 use Yii\Extension\Bulma\NavBar;
 use Yiisoft\Html\Html;
@@ -12,16 +18,15 @@ if (isset($user) && $user->getId() !== null) {
         'url' => '/auth/logout'
     ];
 } else {
-    $menuItems =  $layoutParameters->getMenu();
+    $menuItems =  $applicationParameters->getMenu();
 }
-
 ?>
 
 <?= NavBar::begin()
-    ->brandLabel($layoutParameters->getName())
-    ->brandImage($layoutParameters->getLogo())
-    ->brandUrl($layoutParameters->getBrandUrl())
-    ->options($layoutParameters->getNavBarOptions())
+    ->brandLabel($applicationParameters->getName())
+    ->brandImage($applicationParameters->getLogo())
+    ->brandUrl($applicationParameters->getBrandUrl())
+    ->options($applicationParameters->getNavBarOptions())
     ->start();
 ?>
 

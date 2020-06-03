@@ -10,6 +10,7 @@ use Yiisoft\View\ViewContextInterface;
 use Yiisoft\View\WebView;
 use Yiisoft\Yii\Web\Data\DataResponseFactoryInterface;
 
+use function array_merge;
 use function is_file;
 use function pathinfo;
 

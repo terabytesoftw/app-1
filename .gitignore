@@ -25,19 +25,17 @@ composer.phar
 
 # composer.lock in applications is ignored since it's automatically created by composer when application is installed
 /package-lock.json
+/package.json
 
 # Mac DS_Store Files
 .DS_Store
 
 # phpunit itself is not needed
 phpunit.phar
+phpunit.result.cache
+
 # local phpunit config
 /phpunit.xml
-
-# ignore dev installed apps and extensions
-/apps
-/extensions
-/packages
 
 # NPM packages
 /node_modules
@@ -46,8 +44,3 @@ phpunit.phar
 #codeception
 /tests/_output
 c3.php
-
-#runtime
-/runtime/build
-/runtime/debug
-/runtime/logs

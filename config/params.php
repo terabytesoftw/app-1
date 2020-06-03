@@ -16,7 +16,7 @@ return [
         '@views' => '@root/resources/views'
     ],
 
-    'yii-extension/app' => [
+    'app' => [
         'brandurl' => '/',
         'charset' => 'UTF-8',
         'hero.options' => ['class' => 'hero is-fullheight-with-navbar is-light'],
@@ -28,8 +28,8 @@ return [
         'hero.footer.column.left.options' => ['class' => 'column has-text-left has-text-light'],
         'hero.footer.column.center' => 'Center',
         'hero.footer.column.center.options' => ['class' => 'column has-text-centered has-text-light'],
-        'hero.footer.column.rigth' => 'Rigth',
-        'hero.footer.column.rigth.options' => ['class' => 'column has-text-right has-text-light'],
+        'hero.footer.column.right' => 'Right',
+        'hero.footer.column.right.options' => ['class' => 'column has-text-right has-text-light'],
         'language' => 'en',
         'logo' => '/images/yii-logo.jpg',
         'menu' => [
@@ -55,6 +55,7 @@ return [
         'name' => 'My Project',
         'navbar.options' => ['class' => 'is-black', 'data-sticky' => '', 'data-sticky-shadow' => ''],
         'logger' => [
+            'file' => '@runtime/logs/app.log',
             'levels' => [
                 LogLevel::EMERGENCY,
                 LogLevel::ERROR,
@@ -63,8 +64,15 @@ return [
                 LogLevel::DEBUG,
             ],
         ],
+        'filerotator' => [
+            'maxfilesize' => 10,
+            'maxfiles' => 5,
+            'filemode' => null,
+            'rotatebycopy' => null
+        ],
         'session' => [
             'options' => ['cookie_secure' => 0],
+            'handler' => null
         ],
     ],
 

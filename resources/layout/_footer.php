@@ -2,22 +2,26 @@
 
 declare(strict_types=1);
 
+/**
+ * @var \App\ApplicationParameters $applicationParameters
+ */
+
 use Yiisoft\Html\Html;
 
 ?>
 
-<?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnOptions()) ?>
+<?= Html::beginTag('div', $applicationParameters->getHeroFooterColumnOptions()) ?>
 
-    <?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnLeftOptions()) ?>
-        <?= $layoutParameters->getHeroFooterColumnLeft() ?>
+    <?= Html::beginTag('div', $applicationParameters->getHeroFooterColumnLeftOptions()) ?>
+        <?= $applicationParameters->getHeroFooterColumnLeft() ?>
     <?= Html::endTag('div') ?>
 
-    <?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnCenterOptions()) ?>
-        <?= $layoutParameters->getHeroFooterColumnCenter() ?>
+    <?= Html::beginTag('div', $applicationParameters->getHeroFooterColumnCenterOptions()) ?>
+        <?= $applicationParameters->getHeroFooterColumnCenter() ?>
     <?= Html::endTag('div') ?>
 
-    <?= Html::beginTag('div', $layoutParameters->getHeroFooterColumnRigthOptions()) ?>
-        <?= $layoutParameters->getHeroFooterColumnRigth() ?>
+    <?= Html::beginTag('div', $applicationParameters->getHeroFooterColumnRightOptions()) ?>
+        <?= $applicationParameters->getHeroFooterColumnRight() ?>
     <?= Html::endTag('div') ?>
 
 <?= Html::tag('div');

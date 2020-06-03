@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace App\Provider;
 
-use App\LayoutParameters;
+use App\ApplicationParameters;
 use Psr\Container\ContainerInterface;
-use Psr\Log\LogLevel;
 use Psr\Log\LoggerInterface;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Di\Container;
@@ -20,19 +19,27 @@ final class LoggerProvider extends ServiceProvider
 {
     public function register(Container $container): void
     {
-        $container->set(FileRotatorInterface::class, static function () {
-            return new FileRotator(10);
+        $container->set(FileRotatorInterface::class, static function (ContainerInterface $container) {
+            $applicationParameters = $container->get(ApplicationParameters::class);
+
+            return new FileRotator(
+                $applicationParameters->getFileRotatorMaxFileSize(),
+                $applicationParameters->getFileRotatorMaxFiles(),
+                $applicationParameters->getFileRotatorFileMode(),
+                $applicationParameters->getFileRotatorRotateByCopy()
+            );
         });
 
         $container->set(FileTarget::class, static function (ContainerInterface $container) {
-            $layoutParameters = $container->get(LayoutParameters::class);
+            $applicationParameters = $container->get(ApplicationParameters::class);
+            $aliases = $container->get(Aliases::class);
 
             $fileTarget = new FileTarget(
-                $container->get(Aliases::class)->get('@runtime/logs/app.log'),
+                $aliases->get($applicationParameters->getLoggerFile()),
                 $container->get(FileRotatorInterface::class)
             );
 
-            $fileTarget->setLevels($layoutParameters->getLoggerLevels());
+            $fileTarget->setLevels($applicationParameters->getLoggerLevels());
 
             return $fileTarget;
         });
