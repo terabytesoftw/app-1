@@ -24,7 +24,7 @@ Thumbs.db
 composer.phar
 
 # composer.lock in applications is ignored since it's automatically created by composer when application is installed
-/apps/*/composer.lock
+/package-lock.json
 
 # Mac DS_Store Files
 .DS_Store
@@ -51,6 +51,3 @@ c3.php
 /runtime/build
 /runtime/debug
 /runtime/logs
-
-#public
-/public/assets

@@ -9,7 +9,7 @@ use Yiisoft\Assets\AssetBundle;
 
 final class AppAsset extends AssetBundle
 {
-    public ?string $basePath = '@basePath';
+    public ?string $basePath = '@assets';
     public ?string $baseUrl = '@assetsUrl';
     public ?string $sourcePath = '@root/resources/assets/css';
 

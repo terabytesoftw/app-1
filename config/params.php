@@ -5,6 +5,17 @@ declare(strict_types=1);
 use Psr\Log\LogLevel;
 
 return [
+    'aliases' => [
+        '@root' => dirname(__DIR__),
+        '@assets' => '@root/public/assets',
+        '@assetsUrl' => '/assets',
+        '@npm' => '@root/node_modules',
+        '@public' => '@root/public',
+        '@resources' => '@root/resources',
+        '@runtime' => '@root/runtime',
+        '@views' => '@root/resources/views'
+    ],
+
     'yii-extension/app' => [
         'brandurl' => '/',
         'charset' => 'UTF-8',
@@ -58,7 +69,6 @@ return [
     ],
 
     'yiisoft/yii-debug' => [
-        'enabled' => true,
-        'path' => '@root/runtime/debug'
+        'enabled' => true
     ],
 ];

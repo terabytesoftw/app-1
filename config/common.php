@@ -14,10 +14,8 @@ use Yiisoft\Router\FastRoute\UrlGenerator;
 return [
     /** ALIASES */
     Aliases::class => [
-        '@root' => dirname(__DIR__),
-        '@basePath' => '@root/public/assets',
-        '@assetsUrl' => '/assets',
-        '@npm' => '@root/node_modules',
+        '__class' => Aliases::class,
+        '__construct()' => [$params['aliases']],
     ],
 
     /** CONTAINER DI */

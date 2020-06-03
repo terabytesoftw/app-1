@@ -26,7 +26,7 @@ final class WebViewProvider extends ServiceProvider
              *  WebView config
              */
             $webView = new WebView(
-                $container->get(Aliases::class)->get('@root/resources/views'),
+                $container->get(Aliases::class)->get('@views'),
                 $container->get(Theme::class),
                 $container->get(EventDispatcherInterface::class),
                 $container->get(LoggerInterface::class)
