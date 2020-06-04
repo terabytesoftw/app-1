@@ -22,9 +22,7 @@ final class WebViewProvider extends ServiceProvider
     public function register(Container $container): void
     {
         $container->set(WebView::class, static function (ContainerInterface $container) {
-            /**
-             *  WebView config
-             */
+            /** WebView config */
             $webView = new WebView(
                 $container->get(Aliases::class)->get('@views'),
                 $container->get(Theme::class),
@@ -35,7 +33,7 @@ final class WebViewProvider extends ServiceProvider
             /**
              * Passes {@see Aliases} {@see AssetManager} {@see UrlGenerator} {@see UrlMatcher} {@see ApplicationParameters}
              *
-             * It will be available as $aliases, $assetManager, $urlGenerator, $urlMatcher, $ApplicationParameters in view
+             * It will be available as $aliases, $assetManager, $urlGenerator, $urlMatcher, $applicationParameters in view
              * or layout.
              */
             $webView->setDefaultParameters(

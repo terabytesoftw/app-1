@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+/* @var array $params */
+
 use App\ApplicationParameters;
 
 return [
@@ -26,14 +28,6 @@ return [
             ->logo($params['app']['logo'])
             ->name($params['app']['name'])
             ->navBarOptions($params['app']['navbar.options'])
-            ->menu($params['app']['menu'])
-            ->loggerLevels($params['app']['logger']['levels'])
-            ->loggerFile($params['app']['logger']['file'])
-            ->fileRotatorMaxFileSize($params['app']['filerotator']['maxfilesize'])
-            ->fileRotatorMaxFiles($params['app']['filerotator']['maxfiles'])
-            ->fileRotatorFileMode($params['app']['filerotator']['filemode'])
-            ->fileRotatorRotateByCopy($params['app']['filerotator']['rotatebycopy'])
-            ->sessionOptions($params['app']['session']['options'])
-            ->sessionHandler($params['app']['session']['handler']);
+            ->menu($params['app']['menu']);
     },
 ];

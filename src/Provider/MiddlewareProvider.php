@@ -8,10 +8,10 @@ use Psr\Container\ContainerInterface;
 use Yiisoft\Di\Container;
 use Yiisoft\Di\Support\ServiceProvider;
 use Yiisoft\Router\Middleware\Router;
+use Yiisoft\Yii\Web\MiddlewareDispatcher;
 use Yiisoft\Yii\Web\ErrorHandler\ErrorCatcher;
 use Yiisoft\Yii\Web\Middleware\Csrf;
 use Yiisoft\Yii\Web\Middleware\SubFolder;
-use Yiisoft\Yii\Web\MiddlewareDispatcher;
 use Yiisoft\Yii\Web\Session\SessionMiddleware;
 
 final class MiddlewareProvider extends ServiceProvider

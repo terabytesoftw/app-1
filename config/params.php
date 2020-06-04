@@ -16,6 +16,42 @@ return [
         '@views' => '@root/resources/views'
     ],
 
+    'yiisoft/cache-file' => [
+        'file-cache' => [
+            'path' => '@runtime/cache'
+        ],
+    ],
+
+    'yiisoft/log-target-file' => [
+        'file-target' => [
+            'file' => '@runtime/logs/app.log',
+            'levels' => [
+                LogLevel::EMERGENCY,
+                LogLevel::ERROR,
+                LogLevel::WARNING,
+                LogLevel::INFO,
+                LogLevel::DEBUG,
+            ],
+        ],
+        'file-rotator' => [
+            'maxfilesize' => 10,
+            'maxfiles' => 5,
+            'filemode' => null,
+            'rotatebycopy' => null
+        ],
+    ],
+
+    'yiisoft/yii-web' => [
+        'session' => [
+            'options' => ['cookie_secure' => 0],
+            'handler' => null
+        ],
+    ],
+
+    'yiisoft/yii-debug' => [
+        'enabled' => true
+    ],
+
     'app' => [
         'brandurl' => '/',
         'charset' => 'UTF-8',
@@ -54,29 +90,5 @@ return [
         ],
         'name' => 'My Project',
         'navbar.options' => ['class' => 'is-black', 'data-sticky' => '', 'data-sticky-shadow' => ''],
-        'logger' => [
-            'file' => '@runtime/logs/app.log',
-            'levels' => [
-                LogLevel::EMERGENCY,
-                LogLevel::ERROR,
-                LogLevel::WARNING,
-                LogLevel::INFO,
-                LogLevel::DEBUG,
-            ],
-        ],
-        'filerotator' => [
-            'maxfilesize' => 10,
-            'maxfiles' => 5,
-            'filemode' => null,
-            'rotatebycopy' => null
-        ],
-        'session' => [
-            'options' => ['cookie_secure' => 0],
-            'handler' => null
-        ],
-    ],
-
-    'yiisoft/yii-debug' => [
-        'enabled' => true
     ],
 ];

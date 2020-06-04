@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
+/* @var array $params */
+
 use Psr\Container\ContainerInterface;
 use Yiisoft\Aliases\Aliases;
-
-/** @var array $params */
 
 return [
     Aliases::class => [
