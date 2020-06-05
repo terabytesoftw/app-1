@@ -6,8 +6,8 @@ namespace App;
 
 final class ApplicationParameters
 {
-    private string $brandUrl;
-    private string $charset;
+    private string $brandUrl = '/';
+    private string $charset = 'UTF-8';
     private array $heroOptions = [];
     private array $heroBodyOptions = [];
     private array $heroContainerOptions = [];
@@ -19,10 +19,10 @@ final class ApplicationParameters
     private array $heroFooterColumnLeftOptions = [];
     private string $heroFooterColumnRight;
     private array $heroFooterColumnRightOptions = [];
-    private string $language;
-    private string $logo;
+    private string $language = 'en';
+    private string $logo = '';
     private array $menu = [];
-    private string $name;
+    private string $name = 'My Project';
     private array $navBarOptions = [];
 
     public function getBrandUrl(): string
