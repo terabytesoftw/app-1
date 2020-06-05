@@ -31,6 +31,8 @@
         "codeception/codeception": "@dev",
         "codeception/module-asserts": "@dev",
         "codeception/module-phpbrowser": "@dev",
+        "phpunit/phpunit": "9.1.5",
+        "roave/security-advisories": "dev-master",
         "yiisoft/composer-config-plugin": "@dev"
     },
     "autoload": {
