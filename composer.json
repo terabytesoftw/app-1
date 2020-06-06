@@ -24,7 +24,6 @@
         "yiisoft/router": "@dev",
         "yiisoft/router-fastroute": "@dev",
         "yiisoft/view": "@dev",
-        "yiisoft/yii-debug": "@dev",
         "yiisoft/yii-web": "@dev"
     },
     "require-dev": {
